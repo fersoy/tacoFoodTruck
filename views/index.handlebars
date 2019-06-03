@@ -1,0 +1,38 @@
+<h1>Cats!</h1>
+
+<h2>Choose your the most delicous Taco!</h2>
+
+<ul>
+    {{#each tacos}}
+    {{#unless vegetarian}}
+    {{> tacos/taco-block vegetarian=true}}
+    {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>Do you want a vegie taco?</h2>
+
+<ul>
+    {{#each vegetarian}}
+    {{#if vegetarian}}
+    {{> tacos/taco-block vegetarian=false}}
+    {{/if}}
+    {{/each}}
+</ul>
+
+<h2>Add a Taco</h2>
+<form class="create-form">
+
+    <div class="form-group">
+        <label for="ca">Taco Name:</label>
+        <input type="text" id="ca" name="name">
+    </div>
+
+    <div class="form-group">
+        <label for="sleepy">Vegie?</label><br>
+        <input type="radio" name="vegetarian" value="1" checked> Vegie!<br>
+        <input type="radio" name="vegetarian" value="0"> Not vegie
+    </div>
+
+    <button type="submit">Add Taco</button>
+</form>
