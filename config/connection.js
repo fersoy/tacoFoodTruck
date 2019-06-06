@@ -3,10 +3,11 @@ var mysql = require("mysql");
 
 var connection = mysql.createConnection({
     host: "localhost",
-    port: 3306,
+    port: 8889,
     user: "root",
-    password: "password",
-    database: "tacos_db"
+    password: "root",
+    database: "tacos_db",
+    socket: "/Applications/MAMP/tmp/mysql/mysql.sock"
 });
 
 // Make connection.
