@@ -20,5 +20,5 @@ var taco = {
     }
 };
 
-// Export the database functions for the controller (catsController.js).
+// Export the database functions for the controller (tacos_Controller.js).
 module.exports = taco;
